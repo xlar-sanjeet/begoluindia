@@ -64,9 +64,14 @@ const [menuOpen, setMenuOpen] = useState(false)
     <div className="flex items-center gap-4">
 
   {/* Desktop Instagram Button */}
-  <button className="hidden md:block border border-[#7c3a2d] text-[#7c3a2d] px-5 py-2 rounded-full font-semibold hover:bg-[#7c3a2d] hover:text-white transition-all">
-    Instagram
-  </button>
+ <a
+  href="https://instagram.com/begoluindia"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="hidden md:block border border-[#7c3a2d] text-[#7c3a2d] px-5 py-2 rounded-full font-semibold hover:bg-[#7c3a2d] hover:text-white transition-all"
+>
+  Instagram
+</a>
 
   {/* Shop Button */}
   <button className="bg-[#7c3a2d] text-white px-5 md:px-6 py-3 rounded-full font-bold shadow-md hover:bg-[#5e2a20] hover:scale-105 transition-all">
