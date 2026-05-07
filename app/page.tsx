@@ -8,18 +8,26 @@ const [menuOpen, setMenuOpen] = useState(false)
     name: 'Handcrafted Crochet Lilly',
     price: '₹399',
     image: '/products/lilly.png',
+    category: 'Crochet Flower',
+    badge: 'Best Seller',
   },
+
   {
     name: 'Handcrafted Crochet Sunflower',
     price: '₹279',
     image: '/products/sunflower.png',
+    category: 'Crochet Art',
+    badge: 'Trending',
   },
+
   {
     name: 'Crochet Mini Animal',
     price: '₹849',
     image: '/products/mini animal.png',
+    category: 'Cute Collectible',
+    badge: 'New',
   },
-  ];
+];
 
   return (
     <div className="min-h-screen bg-[#fffaf7] text-gray-900 font-sans">
@@ -337,13 +345,16 @@ const [menuOpen, setMenuOpen] = useState(false)
 />
             {/* Floating Badge */}
             <div className="absolute top-5 left-5 bg-[#7c3a2d] text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
-              Handmade
-            </div>
+  {product.badge}
+</div>
 
           </div>
 
           {/* Content */}
           <div className="p-7 flex flex-col h-full">
+<p className="uppercase tracking-[3px] text-xs font-bold text-[#a14f3d] mb-3">
+  {product.category}
+</p>
 
             {/* Product Name + Price */}
             <div className="flex items-start justify-between min-h-[90px] mb-5 gap-4">
@@ -360,7 +371,7 @@ const [menuOpen, setMenuOpen] = useState(false)
 
             {/* Small Description */}
             <p className="text-gray-500 leading-relaxed mb-6">
-              Premium handmade crochet art designed with love and creativity.
+              Elegant handcrafted crochet creation designed for gifting, decor, and aesthetic lifestyle collections.
             </p>
 
             {/* Buttons */}
@@ -368,13 +379,13 @@ const [menuOpen, setMenuOpen] = useState(false)
 
               <button className="w-full bg-[#7c3a2d] text-white py-4 rounded-full font-bold text-lg hover:bg-[#5e2a20] hover:scale-[1.02] transition-all shadow-lg">
 
-                Add to Cart
+                Order Now
 
               </button>
 
               <button className="w-full border-2 border-[#7c3a2d] text-[#7c3a2d] py-4 rounded-full font-bold hover:bg-[#7c3a2d] hover:text-white transition-all">
 
-                View Details
+                View Product
 
               </button>
 
