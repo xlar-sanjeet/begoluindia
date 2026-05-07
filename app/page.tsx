@@ -68,7 +68,7 @@ const [menuOpen, setMenuOpen] = useState(false)
   href="https://instagram.com/begoluindia"
   target="_blank"
   rel="noopener noreferrer"
-  className="hidden md:block border border-[#7c3a2d] text-[#7c3a2d] px-5 py-2 rounded-full font-semibold hover:bg-[#7c3a2d] hover:text-white transition-all"
+  className="border border-[#7c3a2d] text-[#7c3a2d] px-3 md:px-5 py-2 rounded-full font-semibold hover:bg-[#7c3a2d] hover:text-white transition-all text-sm md:text-base"
 >
   Instagram
 </a>
