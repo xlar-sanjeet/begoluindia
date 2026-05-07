@@ -19,6 +19,11 @@ type Review = {
   text: string
 }
 
+type FAQ = {
+  question: string
+  answer: string
+}
+
 export default function BeGoluIndiaWebsite() {
   const [loading, setLoading] = useState(true)
   const [menuOpen, setMenuOpen] = useState(false)
@@ -84,11 +89,11 @@ export default function BeGoluIndiaWebsite() {
     },
   ]
 
-  const faqs = [
+  const faqs: FAQ[] = [
     {
       question: 'How can I place an order?',
       answer:
-        'You can click the Order Now button on any product. It will directly open WhatsApp with your selected product name.',
+        'Click the Order Now button on any product. WhatsApp will open automatically with your selected product name.',
     },
     {
       question: 'Are these products handmade?',
@@ -103,7 +108,7 @@ export default function BeGoluIndiaWebsite() {
     {
       question: 'How long does delivery take?',
       answer:
-        'Delivery time depends on the product and customization. Since each item is handmade, timelines are shared during order confirmation.',
+        'Delivery time depends on product availability and customization. Since every piece is handmade, timelines are shared during order confirmation.',
     },
   ]
 
@@ -118,7 +123,7 @@ export default function BeGoluIndiaWebsite() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false)
-    }, 1800)
+    }, 1600)
 
     return () => clearTimeout(timer)
   }, [])
@@ -189,7 +194,7 @@ export default function BeGoluIndiaWebsite() {
         <header className="sticky top-0 z-50 bg-[#fffaf7]/90 backdrop-blur-xl border-b border-[#eadfd9] shadow-md">
           <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 flex items-center justify-between">
             <a href="#home" className="flex flex-col">
-              <h1 className="text-2xl md:text-3xl font-black tracking-tight text-[#7c3a2d] leading-none">
+              <h1 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tight text-[#7c3a2d] leading-none">
                 BeGolu India
               </h1>
 
@@ -298,9 +303,9 @@ export default function BeGoluIndiaWebsite() {
           id="home"
           className="relative overflow-hidden bg-gradient-to-b from-[#fffaf7] via-[#fff6f2] to-[#f8ece6]"
         >
-          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 md:gap-16 items-center px-6 pt-14 pb-20 md:py-32 relative z-10">
+          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-center px-6 pt-14 pb-20 md:py-32 relative z-10">
             <div>
-              <p className="uppercase tracking-[6px] text-xs md:text-sm text-[#a14f3d] font-black mb-6">
+              <p className="uppercase tracking-[5px] md:tracking-[6px] text-xs md:text-sm text-[#a14f3d] font-black mb-6">
                 Handmade Crochet Art
               </p>
 
@@ -312,7 +317,7 @@ export default function BeGoluIndiaWebsite() {
                 Worn With Joy.
               </h1>
 
-              <p className="text-lg text-gray-600 leading-relaxed max-w-xl mb-10">
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed max-w-xl mb-10">
                 Discover handcrafted crochet flowers, mini animals, and artistic
                 creations designed with warmth, creativity, and elegance.
               </p>
@@ -342,20 +347,20 @@ export default function BeGoluIndiaWebsite() {
               </div>
             </div>
 
-            <div className="relative hidden md:block">
+            <div className="relative">
               <div className="absolute -top-10 -left-10 w-52 h-52 bg-pink-200 rounded-full blur-3xl opacity-40"></div>
               <div className="absolute bottom-0 right-0 w-52 h-52 bg-orange-200 rounded-full blur-3xl opacity-40"></div>
 
               <img
                 src="/hero.png"
                 alt="BeGolu India crochet collection"
-                className="relative rounded-[44px] shadow-2xl object-cover h-[700px] w-full hover:scale-[1.02] transition-all duration-700"
+                className="relative rounded-[36px] md:rounded-[44px] shadow-2xl object-cover h-[360px] sm:h-[440px] md:h-[700px] w-full hover:scale-[1.02] transition-all duration-700"
               />
             </div>
           </div>
         </section>
 
-        {/* Trust Strip */}
+        {/* Trust Strip - kept only once */}
         <section className="py-8 bg-white/80 backdrop-blur border-y border-[#eadfd9]">
           <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
@@ -427,7 +432,10 @@ export default function BeGoluIndiaWebsite() {
         </div>
 
         {/* Products */}
-        <section id="products" className="py-24 md:py-32 bg-[#fffaf7] relative z-10">
+        <section
+          id="products"
+          className="py-24 md:py-32 bg-[#fffaf7] relative z-10"
+        >
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <p className="uppercase tracking-[5px] text-sm text-[#a14f3d] font-black mb-4">
@@ -450,7 +458,6 @@ export default function BeGoluIndiaWebsite() {
                   key={index}
                   className="group relative bg-white/95 rounded-[36px] overflow-hidden border border-[#eadfd9] shadow-[0_12px_45px_rgba(124,58,45,0.10)] hover:shadow-[0_20px_70px_rgba(124,58,45,0.18)] hover:ring-2 hover:ring-[#e6c6bb] transition-all duration-500 hover:-translate-y-2 animate-[fadeUp_0.8s_ease]"
                 >
-                  {/* Shine */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700 pointer-events-none z-20">
                     <div className="absolute top-0 left-[-100%] w-[60%] h-full bg-white/20 blur-2xl rotate-12 group-hover:left-[140%] transition-all duration-1000"></div>
                   </div>
@@ -550,7 +557,7 @@ export default function BeGoluIndiaWebsite() {
                       className="h-[220px] md:h-[320px] w-full object-cover group-hover:scale-110 transition-all duration-700"
                     />
                   </a>
-                )
+                ),
               )}
             </div>
           </div>
@@ -606,7 +613,10 @@ export default function BeGoluIndiaWebsite() {
         </section>
 
         {/* About */}
-        <section id="about" className="py-24 md:py-28 bg-[#fffaf7] relative z-10">
+        <section
+          id="about"
+          className="py-24 md:py-28 bg-[#fffaf7] relative z-10"
+        >
           <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="relative">
               <div className="absolute -top-10 -left-10 w-52 h-52 bg-pink-200 rounded-full blur-3xl opacity-30"></div>
@@ -833,9 +843,8 @@ export default function BeGoluIndiaWebsite() {
           </div>
         </section>
 
-        
         {/* Footer */}
-        <footer className="bg-gradient-to-br from-[#24120e] via-[#2f1813] to-[#140907] text-gray-300 pt-20 pb-10">
+        <footer className="bg-gradient-to-br from-[#24120e] via-[#2f1813] to-[#140907] text-gray-300 pt-20 pb-28 md:pb-10">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid md:grid-cols-4 gap-12 mb-16">
               <div>
@@ -994,7 +1003,7 @@ export default function BeGoluIndiaWebsite() {
           </div>
         </div>
 
-        {/* Floating WhatsApp */}
+        {/* Floating WhatsApp - desktop only */}
         <a
           href={createWhatsappLink()}
           target="_blank"
