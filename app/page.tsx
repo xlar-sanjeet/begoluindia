@@ -833,35 +833,7 @@ export default function BeGoluIndiaWebsite() {
           </div>
         </section>
 
-        {/* Trusted Brand Strip */}
-        <section className="pt-10 pb-28 md:pb-10 bg-[#f8ece6] border-y border-[#eadfd9]">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-              <div>
-                <h3 className="text-3xl font-black text-[#7c3a2d]">500+</h3>
-                <p className="text-gray-600 font-semibold">Happy Customers</p>
-              </div>
-
-              <div>
-                <h3 className="text-3xl font-black text-[#7c3a2d]">100%</h3>
-                <p className="text-gray-600 font-semibold">Handmade</p>
-              </div>
-
-              <div>
-                <h3 className="text-3xl font-black text-[#7c3a2d]">4.9★</h3>
-                <p className="text-gray-600 font-semibold">
-                  Instagram Reviews
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-3xl font-black text-[#7c3a2d]">🇮🇳</h3>
-                <p className="text-gray-600 font-semibold">Made In India</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
+        
         {/* Footer */}
         <footer className="bg-gradient-to-br from-[#24120e] via-[#2f1813] to-[#140907] text-gray-300 pt-20 pb-10">
           <div className="max-w-7xl mx-auto px-6">
