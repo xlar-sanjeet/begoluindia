@@ -26,15 +26,15 @@ const [menuOpen, setMenuOpen] = useState(false)
       {/* Navbar */}
       <header className="sticky top-0 z-50 bg-[#fffaf7]/95 backdrop-blur border-b border-[#f1e7e2] shadow-sm">
 
-  <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+  <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4 flex items-center justify-between gap-3">
 
     {/* Logo */}
     <div className="flex flex-col">
-      <h1 className="text-2xl md:text-3xl font-black tracking-wide text-[#7c3a2d]">
+      <h1 className="text-xl sm:text-2xl md:text-3xl font-black tracking-wide text-[#7c3a2d] leading-none">
         BeGolu India
       </h1>
 
-      <p className="text-sm text-gray-500">
+      <p className="hidden sm:block text-xs md:text-sm text-gray-500">
         Handmade • Artistic • Elegant
       </p>
     </div>
@@ -74,13 +74,13 @@ const [menuOpen, setMenuOpen] = useState(false)
 </a>
 
   {/* Shop Button */}
-  <button className="bg-[#7c3a2d] text-white px-5 md:px-6 py-3 rounded-full font-bold shadow-md hover:bg-[#5e2a20] hover:scale-105 transition-all">
+  <button className="bg-[#7c3a2d] text-white px-4 md:px-6 py-2 md:py-3 rounded-full text-sm md:text-base font-bold shadow-md hover:bg-[#5e2a20] hover:scale-105 transition-all">
     Shop Now
   </button>
 
   {/* Hamburger Button */}
   <button
-    className="md:hidden text-3xl text-[#7c3a2d]"
+    className="md:hidden text-2xl text-[#7c3a2d]"
     onClick={() => setMenuOpen(!menuOpen)}
   >
     ☰
