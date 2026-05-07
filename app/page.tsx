@@ -306,18 +306,35 @@ const [menuOpen, setMenuOpen] = useState(false)
 
         <div
           key={index}
-          className="group bg-white rounded-[35px] overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 border border-[#f3e5df]"
+          className="
+  group
+  bg-white
+  rounded-[35px]
+  overflow-hidden
+  shadow-md
+  hover:shadow-2xl
+  hover:-translate-y-2
+  transition-all
+  duration-500
+  border border-[#f3e5df]
+"
         >
 
           {/* Image */}
-          <div className="overflow-hidden relative">
+          <div className="overflow-hidden relative bg-[#f8ece6]">
 
             <img
-              src={product.image}
-              alt={product.name}
-              className="h-[320px] md:h-[420px] w-full object-cover group-hover:scale-105 transition-all duration-700"
-            />
-
+  src={product.image}
+  alt={product.name}
+  className="
+    h-[320px] md:h-[420px]
+    w-full
+    object-cover
+    transition-transform duration-700 ease-out
+    group-hover:scale-110
+    group-hover:rotate-1
+  "
+/>
             {/* Floating Badge */}
             <div className="absolute top-5 left-5 bg-[#7c3a2d] text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
               Handmade
