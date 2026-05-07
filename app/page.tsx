@@ -110,7 +110,15 @@ const [menuOpen, setMenuOpen] = useState(false)
       <a href="#contact" onClick={() => setMenuOpen(false)}>
         Contact
       </a>
-
+<a
+  href="https://instagram.com/begoluindia"
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={() => setMenuOpen(false)}
+  className="text-[#7c3a2d] font-bold"
+>
+  Instagram
+</a>
     </div>
 
   </div>
@@ -161,11 +169,16 @@ const [menuOpen, setMenuOpen] = useState(false)
 
         </button>
 
-        <button className="border-2 border-[#7c3a2d] text-[#7c3a2d] px-8 py-4 rounded-full font-bold hover:bg-[#7c3a2d] hover:text-white transition-all">
+        <a
+  href="https://instagram.com/begoluindia"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="border-2 border-[#7c3a2d] text-[#7c3a2d] px-8 py-4 rounded-full font-bold hover:bg-[#7c3a2d] hover:text-white transition-all inline-block"
+>
 
-          Instagram Store
+  Instagram Store
 
-        </button>
+</a>
 
       </div>
 
@@ -895,9 +908,14 @@ const [menuOpen, setMenuOpen] = useState(false)
             📍 India
           </p>
 
-          <p>
-            📸 @begoluindia
-          </p>
+          <a
+  href="https://instagram.com/begoluindia"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="hover:text-white transition-all"
+>
+  📸 @begoluindia
+</a>
 
           <p>
             💬 WhatsApp Orders Available
