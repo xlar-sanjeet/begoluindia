@@ -391,7 +391,54 @@ const [menuOpen, setMenuOpen] = useState(false)
   </div>
 
 </section>
+{/* Instagram Gallery */}
+<section className="py-24 bg-white">
 
+  <div className="max-w-7xl mx-auto px-6">
+
+    <div className="text-center mb-16">
+
+      <p className="uppercase tracking-[6px] text-sm text-[#a14f3d] font-bold mb-4">
+        Instagram Gallery
+      </p>
+
+      <h2 className="text-4xl md:text-6xl font-black text-[#3a1f19] mb-6">
+        Handmade Moments
+      </h2>
+
+    </div>
+
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+
+      <img
+        src="/gallery1.png"
+        alt="Gallery 1"
+        className="rounded-[30px] h-[220px] md:h-[320px] w-full object-cover hover:scale-105 transition-all duration-500"
+      />
+
+      <img
+        src="/gallery2.png"
+        alt="Gallery 2"
+        className="rounded-[30px] h-[220px] md:h-[320px] w-full object-cover hover:scale-105 transition-all duration-500"
+      />
+
+      <img
+        src="/gallery3.png"
+        alt="Gallery 3"
+        className="rounded-[30px] h-[220px] md:h-[320px] w-full object-cover hover:scale-105 transition-all duration-500"
+      />
+
+      <img
+        src="/gallery4.png"
+        alt="Gallery 4"
+        className="rounded-[30px] h-[220px] md:h-[320px] w-full object-cover hover:scale-105 transition-all duration-500"
+      />
+
+    </div>
+
+  </div>
+
+</section>
       {/* Instagram Banner */}
       <section className="relative py-16 md:py-28 overflow-hidden bg-gradient-to-r from-[#7c3a2d] via-[#a14f3d] to-[#c46b58] text-white">
 
