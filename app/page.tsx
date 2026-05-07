@@ -26,15 +26,15 @@ const [menuOpen, setMenuOpen] = useState(false)
       {/* Navbar */}
       <header className="sticky top-0 z-50 bg-[#fffaf7]/95 backdrop-blur border-b border-[#f1e7e2] shadow-sm">
 
-  <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4 flex items-center justify-between gap-3">
+  <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 flex items-center justify-between">
 
     {/* Logo */}
     <div className="flex flex-col">
-      <h1 className="text-xl sm:text-2xl md:text-3xl font-black tracking-wide text-[#7c3a2d] leading-none">
+      <h1 className="text-2xl md:text-3xl font-black tracking-tight text-[#7c3a2d] leading-none">
         BeGolu India
       </h1>
 
-      <p className="hidden sm:block text-xs md:text-sm text-gray-500">
+      <p className="hidden md:block text-sm text-gray-500 mt-1">
         Handmade • Artistic • Elegant
       </p>
     </div>
@@ -60,32 +60,64 @@ const [menuOpen, setMenuOpen] = useState(false)
 
     </nav>
 
-    {/* Right Buttons */}
-    <div className="flex items-center gap-4">
+  {/* Right Buttons */}
+<div className="flex items-center gap-2 md:gap-4">
 
-  {/* Desktop Instagram Button */}
- <a
-  href="https://instagram.com/begoluindia"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="border border-[#7c3a2d] text-[#7c3a2d] px-3 md:px-5 py-2 rounded-full font-semibold hover:bg-[#7c3a2d] hover:text-white transition-all text-sm md:text-base"
->
-  Instagram
-</a>
+  {/* Instagram Button */}
+  <a
+    href="https://instagram.com/begoluindia"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      border border-[#7c3a2d]
+      text-[#7c3a2d]
+      px-3 md:px-5
+      py-2 md:py-2.5
+      rounded-full
+      font-semibold
+      text-xs sm:text-sm md:text-base
+      hover:bg-[#7c3a2d]
+      hover:text-white
+      transition-all
+      whitespace-nowrap
+    "
+  >
+    Instagram
+  </a>
 
   {/* Shop Button */}
-  <button className="bg-[#7c3a2d] text-white px-4 md:px-6 py-2 md:py-3 rounded-full text-sm md:text-base font-bold shadow-md hover:bg-[#5e2a20] hover:scale-105 transition-all">
+  <button
+    className="
+      bg-[#7c3a2d]
+      text-white
+      px-4 md:px-6
+      py-2 md:py-2.5
+      rounded-full
+      text-xs sm:text-sm md:text-base
+      font-bold
+      shadow-md
+      hover:bg-[#5e2a20]
+      hover:scale-105
+      transition-all
+      whitespace-nowrap
+    "
+  >
     Shop Now
   </button>
 
-  {/* Hamburger Button */}
+  {/* Hamburger */}
   <button
-    className="md:hidden text-2xl text-[#7c3a2d]"
+    className="
+      md:hidden
+      text-2xl
+      text-[#7c3a2d]
+      ml-1
+      flex items-center justify-center
+    "
     onClick={() => setMenuOpen(!menuOpen)}
   >
     ☰
   </button>
-
 </div>
 </div>
 {/* Mobile Menu */}
@@ -968,3 +1000,4 @@ const [menuOpen, setMenuOpen] = useState(false)
     </div>
   );
 }
+
